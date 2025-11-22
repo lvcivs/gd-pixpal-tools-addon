@@ -16,9 +16,11 @@ function = 31
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_l3ee6"]
 texture = ExtResource("1_a0yjt")
+texture_type = 1
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_khv4d"]
 texture = ExtResource("2_k4gmu")
+texture_type = 1
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_op67b"]
 constant = 0.141
@@ -50,8 +52,8 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D tex_frg_6;
-uniform sampler2D tex_frg_14;
-uniform sampler2D tex_frg_13;
+uniform sampler2D tex_frg_14 : source_color;
+uniform sampler2D tex_frg_13 : source_color;
 
 
 
